@@ -1,0 +1,31 @@
+﻿[1] GitHub 접속: https://github.com/new
+      Repository name: aion2-yustiel-overlay
+      Visibility: Public
+      Create repository 클릭
+
+[2] 새 저장소에서 Add file > Upload files 로 프로그램 소스 등록 (선택 사항).
+      사용자 설정(settings_ps.json) 등 개인 파일은 업로드하지 마세요.
+
+[3] 저장소 오른쪽 Releases > Create a new release / Draft a new release
+      Choose a tag: v1.6.0 (새 태그 생성)
+      Release title: AION2 Overlay v1.6.0
+      첨부 파일: AION2_Yustiel_Overlay_Update.zip  (*필수*)
+      Set as the latest release, Publish release
+
+[4] 오버레이를 열고 상세설정 > 업데이트
+      저장소 입력: 내GitHub계정명/aion2-yustiel-overlay
+      [주소 저장] 클릭
+      [업데이트 확인] 클릭
+      현재 v1.6.0과 GitHub v1.6.0은 동일하므로 최신이라고 뜨는 것이 정상입니다.
+
+[5] 나중에 v1.6.1 ZIP을 올리는 경우:
+      v1.6.1로 새 Release 게시하고 같은 이름의 ZIP을 첨부합니다.
+      실행 중인 오버레이에서 새 버전 알림 / [업데이트 설치] 클릭.
+      설치가 끝나면 자동으로 재실행되고 기존 설정을 유지합니다.
+
+중요: ChatGPT 대화에서 새 ZIP을 생성했다고 GitHub Release가 자동 게시되지는 않습니다.
+      반드시 버전별 ZIP을 GitHub 저장소 Release에 게시해야 합니다.
+
+문제: GitHub Releases/latest API는 공개 정식 최신 배포를 조회합니다.
+      Draft, prerelease는 업데이트 대상으로 사용하지 않습니다.
+      저장소가 Private이면 인증이 필요하므로 이 버전 업데이트 기능으로는 이용할 수 없습니다.

@@ -1,0 +1,15 @@
+Id,Day,Time,Name,GroupShift,Enabled,Note
+mon-rift-20,Monday,20:05,시공의 균열 쟁탈전,0,1,포탈 20:00
+mon-rift-23,Monday,23:05,시공의 균열 쟁탈전,0,1,포탈 23:00
+tue-zone,Tuesday,22:00,어비스 균열지대,0,1,입장 시간 확인
+wed-art,Wednesday,21:20,아티팩트 점령전,1,1,그룹별 30분 차이
+wed-boss,Wednesday,21:45,어비스 하층·중층 보스,1,1,그룹별 30분 차이
+thu-rift-20,Thursday,20:05,시공의 균열 쟁탈전,0,1,포탈 20:00
+thu-zone,Thursday,22:00,어비스 균열지대,0,1,입장 시간 확인
+thu-rift-23,Thursday,23:05,시공의 균열 쟁탈전,0,1,포탈 23:00
+fri-nahma,Friday,22:00,수호신장 나흐마,1,1,하층 및 중층
+sat-rift-20,Saturday,20:05,시공의 균열 쟁탈전,0,1,포탈 20:00
+sat-art,Saturday,21:20,아티팩트 점령전,1,1,그룹별 30분 차이
+sat-boss,Saturday,21:45,어비스 하층·중층 보스,1,1,그룹별 30분 차이
+sat-rift-23,Saturday,23:05,시공의 균열 쟁탈전,0,1,포탈 23:00
+sun-nahma,Sunday,22:00,수호신장 나흐마,1,1,하층 및 중층
