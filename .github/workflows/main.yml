@@ -1,0 +1,87 @@
+
+name: Publish AION2 v1.8.5
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Download verified v1.8.4 release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          New-Item -ItemType Directory -Force previous | Out-Null
+          gh release download v1.8.4 --pattern 'AION2_Yustiel_Overlay_Update.zip' --dir previous
+
+      - name: Prepare v1.8.5 from the existing v1.8.4 release
+        shell: pwsh
+        env:
+          PATCH_B64: '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'
+        run: |
+          @'
+          import os, io, json, zlib, base64, hashlib, zipfile
+          from pathlib import Path
+          blob = Path('previous/AION2_Yustiel_Overlay_Update.zip').read_bytes()
+          assert hashlib.sha256(blob).hexdigest() == 'd283978f6b6df19b224a8bafee8ff7074f9d7a2ccd491f1a19f20564185a78a5', 'v1.8.4 release ZIP does not match the verified original'
+          with zipfile.ZipFile(io.BytesIO(blob)) as z:
+              content = {n.partition('/')[2]: z.read(n) for n in z.namelist() if not n.endswith('/')}
+          edits = json.loads(zlib.decompress(base64.b64decode(os.environ['PATCH_B64'])).decode('utf-8'))
+          for name, change in edits.items():
+              if 'add' in change:
+                  content[name] = change['add'].encode('utf-8')
+              else:
+                  raw = content[name]
+                  lines = raw.decode('utf-8-sig').splitlines(keepends=True)
+                  for start, end, new in reversed(change['edits']):
+                      lines[start:end] = new.splitlines(keepends=True)
+                  content[name] = (b'\xef\xbb\xbf' if raw.startswith(b'\xef\xbb\xbf') else b'') + ''.join(lines).encode('utf-8')
+          assert b"[Version]'1.8.5'" in content['AION2_Overlay.ps1']
+          assert hashlib.sha256(content['AION2_Overlay.ps1']).hexdigest() == '3fe7e8c0305d4943526e134fddb05e58694dac069a1cb8c784a8bc8c62121b62', 'Unexpected patched source'
+          root = Path('app')
+          root.mkdir(exist_ok=True)
+          for name, data in content.items():
+              path = root / name
+              path.parent.mkdir(parents=True, exist_ok=True)
+              path.write_bytes(data)
+          artifact = Path('AION2_Yustiel_Overlay_Update.zip')
+          with zipfile.ZipFile(artifact, 'w', zipfile.ZIP_DEFLATED) as z:
+              for name, data in sorted(content.items()):
+                  z.writestr('AION2_Yustiel_Overlay_v1.8.5/' + name, data)
+          print('Created', artifact, 'with', len(content), 'files')
+          '@ | Set-Content -Encoding utf8 build_release.py
+          python build_release.py
+
+      - name: Check PowerShell syntax before publishing
+        shell: powershell
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'app/AION2_Overlay.ps1'), [ref]$tokens, [ref]$errors) | Out-Null
+          if ($errors.Count -gt 0) { $errors | Out-String | Write-Error; exit 1 }
+
+      - name: Commit the updated app source
+        shell: pwsh
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add app
+          git commit -m 'Update overlay app to v1.8.5'
+          git push origin HEAD:main
+
+      - name: Publish the GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v1.8.5 './AION2_Yustiel_Overlay_Update.zip' --target main --title 'AION2 Overlay v1.8.5' --notes '전체 일정 / 간단히 보기 전환 기능 추가.'
