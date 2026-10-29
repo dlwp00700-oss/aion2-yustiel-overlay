@@ -1,0 +1,22 @@
+﻿AION2 유스티엘 오버레이 v1.8.5 · GitHub 업데이트
+
+[기존 사용자]
+1. GitHub 저장소의 Releases에서 Create a new release 선택
+2. 태그: v1.8.5 / 제목: AION2 Overlay v1.8.5
+3. 이 패키지와 함께 받은 AION2_Yustiel_Overlay_Update.zip 파일을 Assets에 첨부
+4. Publish release 클릭
+5. 기존 오버레이가 자동으로 새 버전을 확인하도록 잠시 기다리거나, 트레이 메뉴의 '업데이트 확인' 클릭
+6. 오버레이에 나타나는 '업데이트 ›' 버튼으로 다운로드·설치
+
+[길드원 처음 설치]
+1. GitHub 저장소 https://github.com/dlwp00700-oss/aion2-yustiel-overlay/releases/latest 열기
+2. Assets의 AION2_Yustiel_Overlay_Update.zip 다운로드 후 압축 해제
+3. AION2_start.vbs 더블클릭하여 실행
+4. 화면이 바로 표시되지 않으면 트레이의 오버레이 아이콘 우클릭 -> '오늘 일정 보기 / 숨기기'
+
+[중요]
+- GitHub 저장소의 Code 탭에 매번 소스코드를 다시 올릴 필요는 없습니다.
+- 새 버전마다 새 Release + 새 태그 + 업데이트 ZIP 첨부가 필요합니다.
+- ZIP 파일 이름을 AION2_Yustiel_Overlay_Update.zip으로 유지하세요.
+- v1.8.5 설치 후 새 버전이 없으면 업데이트 버튼이 보이지 않는 것이 정상입니다.
+- 개인 설정(settings_ps.json)이나 로그는 GitHub 공개 저장소에 업로드하지 마세요.
